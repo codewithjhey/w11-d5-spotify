@@ -11,8 +11,8 @@ const LeftNavBar = () => {
         <div className="logo-container">
           <img
             id="logo"
-            className="ml-3 my-3"
-            src="/public/assets/Green.svg"
+            className="ml-3 my-2"
+            src="Green.svg"
             alt="The spotify Logo"
           />
         </div>
