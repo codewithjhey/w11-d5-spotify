@@ -267,7 +267,7 @@ h2 {
   top: 0px;
   background-color: #000000;
   flex-shrink: 0;
-  z-index: 0;
+  z-index: 1;
 }
 
 .bg-test {
@@ -615,4 +615,14 @@ li {
 
 .hide {
   display: none;
+}
+
+.left-space {
+  margin-left: 256px;
+  padding: 8px 16px;
+}
+
+.sidebar-margin {
+  margin-left: 256px;
+  padding: 8px 16px;
 }

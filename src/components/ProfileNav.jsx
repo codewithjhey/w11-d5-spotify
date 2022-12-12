@@ -14,13 +14,13 @@ const ProfileNav = () => {
           <ul className="navbar-nav back-forward-icon mr-auto mt-2 mt-lg-0">
             <li className="nav-item">
               <a className="nav-link back-icon" href="#">
-                <img src="./icons/back.svg" alt="" />
+                <img src="back.svg" alt="Nav back" />
                 <span className="sr-only">(current)</span>
               </a>
             </li>
             <li className="nav-item">
               <a className="nav-link forward-icon" href="#">
-                <img src="./icons/forward gray.svg" alt="" />
+                <img src="forward gray.svg" alt="Nav forward" />
               </a>
             </li>
           </ul>
@@ -36,11 +36,11 @@ const ProfileNav = () => {
         </div>
         <div id="profile-avatar" className="form-inline my-2 my-lg-0">
           <div id="profile-image">
-            <img src="./icons/profile.png" alt="" />
+            <img src="profile.png" alt="user" />
           </div>
           <div id="profile-name">Angel</div>
           <div id="profile-icon">
-            <img src="./icons/drop-down.svg" alt="" />
+            <img src="drop-down.svg" alt="" />
           </div>
         </div>
       </div>

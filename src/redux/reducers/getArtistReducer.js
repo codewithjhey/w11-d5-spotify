@@ -7,7 +7,7 @@ const addArtistReducer = (state = initialState, action) => {
     case ADD_ARTIST_SEARCH:
       return {
         ...state,
-        artistArray: [action.payload]
+        artistArray: action.payload
       }
     default:
       return state
