@@ -1,6 +1,32 @@
 import { Nav, Form, FormControl } from "react-bootstrap"
+import { useEffect, useState } from "react"
+import { useDispatch } from "react-redux"
+import { getArtistSearch } from "../redux/actions"
 
 const ProfileNav = () => {
+  const [query, setQuery] = useState("")
+  const dispatch = useDispatch()
+
+  const handleChange = (e) => {
+    setQuery(e.target.value)
+  }
+
+  const handleSubmit = async (e) => {
+    if (query.length >= 0) {
+      dispatch(getArtistSearch(query))
+    } else {
+      dispatch(getArtistSearch("wizkid"))
+    }
+    e.preventDefault()
+  }
+
+  // useEffect(() => {
+  //   if (query.length >= 0) {
+  //     dispatch(getArtistSearch(query))
+  //   } else {
+  //     dispatch(getArtistSearch("wizkid"))
+  //   }
+  // }, [])
   return (
     <Nav
       id="profile-top-navbar"
@@ -25,12 +51,13 @@ const ProfileNav = () => {
             </li>
           </ul>
 
-          <Form id="search-form" className="form-inline my-2 my-lg-0 hide">
+          <Form className="form-inline my-2 my-lg-0" onSubmit={handleSubmit}>
             <FormControl
-              className="query-search mr-sm-2"
+              id="search-form"
               type="text"
-              placeholder="Search Music"
-              aria-label="Search"
+              placeholder="Search"
+              className="ml-2"
+              onChange={handleChange}
             />
           </Form>
         </div>

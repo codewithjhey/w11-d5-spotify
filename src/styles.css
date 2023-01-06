@@ -18,7 +18,7 @@ body {
     rgba(18, 18, 18, 1) 100%
   );
   font-family: "Work Sans", sans-serif;
-  height: 100vh;
+  height: 100%;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
@@ -50,8 +50,11 @@ body {
 }
 
 #profile-top-navbar {
+  padding-inline: 0;
+
+  position: sticky;
+  top: 0;
   z-index: 1;
-  margin-left: 256px;
 }
 
 /* .nav-bar {
@@ -152,16 +155,19 @@ h2 {
 }
 
 .card {
-  padding: 13px;
+  width: 190px;
+  height: 320px;
+  padding: 10px;
   background-color: #232222;
-  border-radius: 8px;
+  border-radius: 6px;
   color: white;
   cursor: pointer;
   transition: 1s;
+  margin-right: 4px !important;
 }
 
 .card img:nth-child(2) {
-  border-radius: 8px;
+  border-radius: 6px;
   box-shadow: 0px 0px 10px -3px black;
 }
 .play-on-hover {
@@ -267,7 +273,7 @@ h2 {
   top: 0px;
   background-color: #000000;
   flex-shrink: 0;
-  z-index: 1;
+  z-index: 0;
 }
 
 .bg-test {
@@ -617,12 +623,43 @@ li {
   display: none;
 }
 
-.left-space {
+.album-favorites::-webkit-scrollbar {
+  width: 6px; /* width of the entire scrollbar */
+}
+
+.album-favorites::-webkit-scrollbar-thumb {
+  background-color: #212529; /* color of the scroll thumb */
+  border-radius: 20px; /* roundness of the scroll thumb */
+  /* creates padding around scroll thumb */
+}
+
+#search-form {
+  width: 300px;
+  border: none;
+  background-color: grey;
+  color: white;
+}
+
+#profile-top-navbar {
   margin-left: 256px;
-  padding: 8px 16px;
 }
 
 .sidebar-margin {
   margin-left: 256px;
   padding: 8px 16px;
+}
+
+.left-space {
+  margin-left: 256px;
+  padding: 8px 16px;
+}
+
+.ft {
+  text-align: left;
+  font-size: 28px;
+}
+
+#logo {
+  height: 40px;
+  margin-left: -70px;
 }

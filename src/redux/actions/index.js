@@ -1,12 +1,12 @@
 export const ADD_ARTIST_SEARCH = "ADD_ARTIST_SEARCH"
 export const ADD_SELECTED_PLAY = "ADD_SELECTED_PLAY"
 
-export const getArtistSearch = (artist) => {
+export const getArtistSearch = (query) => {
   const Endpoint = `https://striveschool-api.herokuapp.com/api/deezer/search?q=`
 
   return async (dispatch, getState) => {
     try {
-      const response = await fetch(Endpoint + artist)
+      const response = await fetch(Endpoint + query)
       if (response.ok) {
         const data = await response.json()
         const fetchedData = data.data
@@ -17,7 +17,7 @@ export const getArtistSearch = (artist) => {
         })
         console.log(getState())
       } else {
-        console.log("error fetching artists")
+        console.log("error fetching artist")
       }
     } catch (error) {
       console.log(error)

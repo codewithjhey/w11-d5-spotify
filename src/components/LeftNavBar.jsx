@@ -2,27 +2,25 @@ import { Navbar, Nav } from "react-bootstrap"
 
 const LeftNavBar = () => {
   return (
-    <div className="Left-Nav" id="NavBar">
+    <div>
       <Navbar
         expand="lg"
-        className="navbar navbar-dark flex-column align-content-start justify-content-start "
+        className="navbar navbar-dark flex-column align-content-start justify-content-start fixed-top"
+        id="NavBar"
       >
-        <div className="logo-container">
+        <Navbar.Brand href="#home">
           <img
             id="logo"
-            className="ml-2 my-3"
-            src="Green.svg"
+            className="my-3 justify-content-start"
+            src="Spotify logo.png"
             alt="The spotify Logo"
           />
-        </div>
-        <div className="mr-auto flex-column">
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Nav className="mr-auto flex-column">
           <Nav.Link href="#home">
             <div className="d-flex align-items-center navbar-selected">
-              <img
-                src="Vector.svg"
-                alt="Home symbol"
-                className="nav-icon-size"
-              />
+              <img src="Vector.svg" alt="Home symbol" className="ml-0" />
               <p className="my-0 mx-3">Home</p>
             </div>
           </Nav.Link>
@@ -31,9 +29,9 @@ const LeftNavBar = () => {
               <img
                 src="search.svg"
                 alt="Search Lens symbol"
-                className="nav-icon-size"
+                className="nav-icon-size "
               />
-              <p className="my-0 mx-3">Search</p>
+              <p className="my-0 mx-2">Search</p>
             </div>
           </Nav.Link>
           <Nav.Link href="#home">
@@ -41,9 +39,9 @@ const LeftNavBar = () => {
               <img
                 src="library.svg"
                 alt="Library symbol"
-                className="nav-icon-size"
+                className="nav-icon-size "
               />
-              <p className="my-0 mx-3">Your Library</p>
+              <p className="my-0 mx-2">Your Library</p>
             </div>
           </Nav.Link>
           <Nav.Link href="#home">
@@ -51,7 +49,7 @@ const LeftNavBar = () => {
               <div className="navbar-icon-square  d-flex align-items-center justify-content-center">
                 <img src="add.svg" alt="" className="nav-icon-size" />
               </div>
-              <p className="my-0 mx-3">Create PlayList</p>
+              <p className="my-0 mx-2">Create PlayList</p>
             </div>
           </Nav.Link>
           <Nav.Link href="#home">
@@ -62,7 +60,7 @@ const LeftNavBar = () => {
               >
                 <img src="favorite.svg" alt="" className="nav-icon-size" />
               </div>
-              <p className="my-0 mx-3">Liked Songs</p>
+              <p className="my-0 mx-2">Liked Songs</p>
             </div>
             <div id="album-to-line"></div>
           </Nav.Link>
@@ -71,12 +69,13 @@ const LeftNavBar = () => {
             <div className="install-container flex-column bg-test navbar-selected">
               <div className="d-flex align-items-center install">
                 <img src="download app.svg" alt="Install symbol" />
-                <p className="my-0 mx-3">Install App</p>
+                <p className="my-0 mx-2">Install App</p>
               </div>
             </div>
           </Nav.Link>
-        </div>
+        </Nav>
       </Navbar>
+      <div className="sidebar-placeholder"></div>
     </div>
   )
 }
